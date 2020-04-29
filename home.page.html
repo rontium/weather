@@ -1,0 +1,25 @@
+<ion-header translucent>
+  <ion-toolbar color="secondary">
+    <ion-title>
+    Säätiedot
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light" class="ion-padding" ion-text>
+
+  <ion-button (click)="avaa()" size="large" expand="block" fill="outline" color="tertiary" class="ion-padding">Valitse kaupunki</ion-button>
+
+  <ion-list >
+
+    <ion-list-header  color="dark" class="ion-padding">
+      Säätiedot
+    </ion-list-header>
+    
+     <ion-item color="medium"><ion-label>Kaupunki</ion-label>{{ saatiedot.kaupunki }}</ion-item>
+     <ion-item color="medium"><ion-label>Lämpötila</ion-label>{{ saatiedot.lampo }} °C</ion-item>
+     <ion-item color="medium"><ion-label>Sää</ion-label>{{ saatiedot.kuvaus }}<ion-img [src]="saatiedot.kuva"></ion-img></ion-item>
+     
+  </ion-list>
+   
+</ion-content>
